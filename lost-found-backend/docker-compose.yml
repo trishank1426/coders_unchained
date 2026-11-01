@@ -1,0 +1,15 @@
+# Optional: a ready-made MySQL for local development.
+# Uses DB_PASSWORD from your .env file.  Start with:  docker compose up -d
+services:
+  db:
+    image: mysql:8.4
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD:-change-me}
+      MYSQL_DATABASE: ${DB_NAME:-lost_found}
+    ports:
+      - "127.0.0.1:3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql
+volumes:
+  dbdata: {}

@@ -1,7 +1,7 @@
 {
   "name": "lost-found-backend",
   "version": "1.0.0",
-  "description": "Campus lost and found API: MySQL + image hosting",
+  "description": "Campus lost and found API: PostgreSQL + Supabase Storage",
   "main": "server.js",
   "engines": {
     "node": ">=18"
@@ -11,6 +11,7 @@
     "dev": "node --watch server.js"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
@@ -19,7 +20,7 @@
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "multer": "^2.5.0",
-    "mysql2": "^3.11.0",
+    "pg": "^8.13.0",
     "sharp": "^0.35.5"
   }
 }
